@@ -35,3 +35,25 @@ print(df['user_score'].dtypes)
 
 # Opcional: Ver algunos valores para confirmar la conversión
 print(df['user_score'].head())
+
+
+                    # Convertir 'year_of_release' a tipo entero
+df['year_of_release'] = df['year_of_release'].astype('Int64')
+
+# Ver los valores únicos de la columna 'year_of_release'
+print("Valores únicos en 'year_of_release':")
+print(df['year_of_release'].unique())
+
+# Calcular la mediana de 'year_of_release' (ignorando los valores NaN)
+median_year = df['year_of_release'].median()
+
+# Imputar los valores faltantes con la mediana
+df['year_of_release'].fillna(median_year, inplace=True)
+
+# Verificar los cambios
+print("Valores únicos en 'year_of_release' después de la imputación:")
+print(df['year_of_release'].unique())
+
+# Ver las primeras filas para confirmar
+print("Primeros valores en 'year_of_release' después de la imputación:")
+print(df['year_of_release'].head(10))
