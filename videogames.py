@@ -90,6 +90,5 @@ df['total_sales'] = df['na_sales'] + df['eu_sales'] + df['jp_sales'] + df['other
 # Verificar el resultado mostrando las primeras filas
 print(df[['name', 'na_sales', 'eu_sales', 'jp_sales', 'other_sales', 'total_sales']].head())
 
-# Guardar el DataFrame depurado en un archivo CSV
-df.to_csv('/Users/issacmoto/Desktop/Tripletent/Proyectos Tripletent/Myprojectvideogames/videogames/videogames_cleaned.csv', index=False)
+
 
